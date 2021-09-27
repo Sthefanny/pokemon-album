@@ -11,7 +11,7 @@ import SwiftUI
 struct pokemon_albumApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
