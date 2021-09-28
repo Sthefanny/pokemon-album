@@ -8,7 +8,7 @@
 import Foundation
 
 class UrlConfig {
-    static let pokedexUrl: String = "https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json"
-    static let pokeSpeciesUrl: String = "https://pokeapi.co/api/v2/pokemon-species/"
-    static let pokeApiUrl: String = "https://pokeapi.co/api/v2/pokemon/"
+    static func getPokemonImage(num: String) -> String {
+        return "https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/\(num).png"
+      }
 }

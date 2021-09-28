@@ -32,81 +32,101 @@ enum Type {
 func getType(value: String) -> Type {
     switch value {
     case "Normal":
-        return .normal;
+        return .normal
     case "Fire":
-        return .fire;
+        return .fire
     case "Fighting":
-        return .fighting;
+        return .fighting
     case "Water":
-        return .water;
+        return .water
     case "Flying":
-        return .flying;
+        return .flying
     case "Grass":
-        return .grass;
+        return .grass
     case "Poison":
-        return .poison;
+        return .poison
     case "Electric":
-        return .electric;
+        return .electric
     case "Ground":
-        return .ground;
+        return .ground
     case "Psychic":
-        return .psychic;
+        return .psychic
     case "Rock":
-        return .rock;
+        return .rock
     case "Ice":
-        return .ice;
+        return .ice
     case "Bug":
-        return .bug;
+        return .bug
     case "Ghost":
-        return .ghost;
+        return .ghost
     case "Dark":
-        return .dark;
+        return .dark
     case "Steel":
-        return .steel;
+        return .steel
     case "Fairy":
-        return .fairy;
+        return .fairy
     default:
-        return .undefined;
+        return .undefined
     }
 }
 
 func getTypeColor(value: String) -> Color {
+    var color: Color = Color("Undefined")
     switch value {
     case "Normal":
-    return Color("Normal");
+        color = Color("Normal")
+        break
     case "Fire":
-    return Color("Fire");
+        color = Color("Fire")
+        break
     case "Fighting":
-    return Color("Fighting");
+        color = Color("Fighting")
+        break
     case "Water":
-    return Color("Water");
+        color = Color("Water")
+        break
     case "Flying":
-    return Color("Flying");
+        color = Color("Flying")
+        break
     case "Grass":
-    return Color("Grass");
+        color = Color("Grass")
+        break
     case "Poison":
-    return Color("Poison");
+        color = Color("Poison")
+        break
     case "Electric":
-    return Color("Electric");
+        color = Color("Electric")
+        break
     case "Ground":
-    return Color("Ground");
+        color = Color("Ground")
+        break
     case "Psychic":
-    return Color("Psychic");
+        color = Color("Psychic")
+        break
     case "Rock":
-    return Color("Rock");
+        color = Color("Rock")
+        break
     case "Ice":
-    return Color("Ice");
+        color = Color("Ice")
+        break
     case "Bug":
-    return Color("Bug");
+        color = Color("Bug")
+        break
     case "Ghost":
-    return Color("Ghost");
+        color = Color("Ghost")
+        break
     case "Dark":
-    return Color("Dark");
+        color = Color("Dark")
+        break
     case "Steel":
-    return Color("Steel");
+        color = Color("Steel")
+        break
     case "Fairy":
-    return Color("Fairy");
+        color = Color("Fairy")
+        break
     default:
-    return Color("Undefined");
+        color = Color("Undefined")
+        break
     }
+    return color
 }

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "pokemons2.png",
+      "filename" : "pokeball.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "pokemons2-1.png",
+      "filename" : "pokeball-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "pokemons2-2.png",
+      "filename" : "pokeball-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
