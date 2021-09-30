@@ -21,7 +21,7 @@ struct HomeView: View {
                         .aspectRatio(contentMode: .fit)
                     
                     
-                    Text("Pokédex da Stel")
+                    Text("Album Pokémon")
                         .font(.title2)
                         .foregroundColor(Color("darkPurple"))
                         .fontWeight(.bold)
@@ -30,23 +30,21 @@ struct HomeView: View {
                 }
                 .frame(width: UIScreen.main.bounds.width, alignment: .center)
                 
-                ScrollView {
-                    ForEach(pokemonViewModel.pokemon) { pokemon in
-                        LazyVStack {
-                            PokemonCellView(pokemon: pokemon)
+                if (pokemonViewModel.pokemon.count > 0) {
+                    ScrollView {
+                        ForEach(0 ..< pokemonViewModel.pokemon.count) { index in
+                            LazyVStack {
+                                PokemonCellView(pokemon: pokemonViewModel.pokemon[index])
+                            }
                         }
                     }
+                } else {
+                    LoadingView()
                 }
             }
         }
         .onAppear {
-            pokemonViewModel.fetchPokemon { isSuccess in
-                if(isSuccess == true) {
-                    print("Deu bom")
-                } else {
-                    print("Deu ruim")
-                }
-            }
+            pokemonViewModel.fetchPokemon { _ in }
         }
     }
 }

@@ -18,6 +18,8 @@
 		E5703DF02702576600840682 /* UrlConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5703DEF2702576600840682 /* UrlConfig.swift */; };
 		E58299C7270396F2007A95AE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E58299C6270396F2007A95AE /* Kingfisher */; };
 		E5C2C59D270398D80058D842 /* PokemonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2C59C270398D80058D842 /* PokemonCellView.swift */; };
+		E5FBFE5927062AD500AD2024 /* PokemonDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FBFE5827062AD500AD2024 /* PokemonDetailsView.swift */; };
+		E5FBFE5C27064F5100AD2024 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FBFE5B27064F5100AD2024 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		E567D5DC2702567300E7EC2D /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		E5703DEF2702576600840682 /* UrlConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlConfig.swift; sourceTree = "<group>"; };
 		E5C2C59C270398D80058D842 /* PokemonCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCellView.swift; sourceTree = "<group>"; };
+		E5FBFE5827062AD500AD2024 /* PokemonDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsView.swift; sourceTree = "<group>"; };
+		E5FBFE5B27064F5100AD2024 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,8 @@
 			children = (
 				E5228381270248A300B5BF20 /* HomeView.swift */,
 				E5C2C59C270398D80058D842 /* PokemonCellView.swift */,
+				E5FBFE5827062AD500AD2024 /* PokemonDetailsView.swift */,
+				E5FBFE5B27064F5100AD2024 /* LoadingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,8 +224,10 @@
 				E567D5D527024AB700E7EC2D /* Pokemon.swift in Sources */,
 				E5228380270248A300B5BF20 /* pokemon_albumApp.swift in Sources */,
 				E567D5D227024A8800E7EC2D /* PokemonViewModel.swift in Sources */,
+				E5FBFE5927062AD500AD2024 /* PokemonDetailsView.swift in Sources */,
 				E5C2C59D270398D80058D842 /* PokemonCellView.swift in Sources */,
 				E5703DF02702576600840682 /* UrlConfig.swift in Sources */,
+				E5FBFE5C27064F5100AD2024 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,10 +15,11 @@ class PokemonViewModel: ObservableObject {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
                 print(data)
-                let decodedData = try JSONDecoder().decode(PokemonList.self, from: data)
-                pokemon = decodedData.pokemon
+                let decodedData = try JSONDecoder().decode([Pokemon].self, from: data)
+                pokemon = decodedData
                 callback(true)
             } catch {
+                print(error)
                 callback(false)
             }
         }
