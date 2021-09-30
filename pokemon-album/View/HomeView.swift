@@ -32,7 +32,9 @@ struct HomeView: View {
                 
                 ScrollView {
                     ForEach(pokemonViewModel.pokemon) { pokemon in
-                        PokemonCellView(pokemon: pokemon)
+                        LazyVStack {
+                            PokemonCellView(pokemon: pokemon)
+                        }
                     }
                 }
             }

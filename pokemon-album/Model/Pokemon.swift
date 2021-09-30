@@ -15,7 +15,6 @@ struct Pokemon: Decodable, Identifiable {
     let id: Int
     let num: String
     let name: String
-    let img: String
     let type: [String]
     let height: String?
     let width: String?
