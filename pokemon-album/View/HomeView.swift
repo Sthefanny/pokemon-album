@@ -11,41 +11,45 @@ struct HomeView: View {
     @ObservedObject var pokemonViewModel = PokemonViewModel()
     
     var body: some View {
-        ZStack(alignment: .top) {
-            Color("lightPurple").edgesIgnoringSafeArea(.all)
-            
-            VStack {
-                ZStack(alignment: .top) {
-                    Image("pokemons")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                    
-                    
-                    Text("Album Pokémon")
-                        .font(.title2)
-                        .foregroundColor(Color("darkPurple"))
-                        .fontWeight(.bold)
-                        .padding(.top)
-                        .frame(width: UIScreen.main.bounds.width - 40, alignment: .leading)
-                }
-                .frame(width: UIScreen.main.bounds.width, alignment: .center)
+        NavigationView {
+            ZStack(alignment: .top) {
+                Color("lightPurple").edgesIgnoringSafeArea(.all)
                 
-                if (pokemonViewModel.pokemon.count > 0) {
-                    ScrollView {
-                        ForEach(0 ..< pokemonViewModel.pokemon.count) { index in
-                            LazyVStack {
-                                PokemonCellView(pokemon: pokemonViewModel.pokemon[index])
+                VStack {
+                    ZStack(alignment: .top) {
+                        Image("pokemons")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                        
+                        
+                        Text("Album Pokémon")
+                            .font(.title2)
+                            .foregroundColor(Color("darkPurple"))
+                            .fontWeight(.bold)
+                            .padding(.top)
+                            .frame(width: UIScreen.main.bounds.width - 40, alignment: .leading)
+                    }
+                    .frame(width: UIScreen.main.bounds.width, alignment: .center)
+                    
+                    if (pokemonViewModel.pokemon.count > 0) {
+                        ScrollView {
+                            ForEach(0 ..< pokemonViewModel.pokemon.count) { index in
+                                LazyVStack {
+                                    PokemonCellView(pokemon: pokemonViewModel.pokemon[index])
+                                }
                             }
                         }
+                    } else {
+                        LoadingView()
                     }
-                } else {
-                    LoadingView()
                 }
             }
+            .onAppear {
+                pokemonViewModel.fetchPokemon { _ in }
+            }
+            .navigationBarHidden(true)
         }
-        .onAppear {
-            pokemonViewModel.fetchPokemon { _ in }
-        }
+        .accentColor( .white)
     }
 }
 

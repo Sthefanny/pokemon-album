@@ -13,8 +13,7 @@ struct PokemonDetailsView: View {
     
     var body: some View {
         ZStack {
-            //            background(getTypeColor(value: pokemon.type.first ?? "").opacity(0.8))
-            Color("Grass").edgesIgnoringSafeArea(.all)
+            Color("\(pokemon.types.first ?? ")").edgesIgnoringSafeArea(.all)
             
             VStack {
                 _buildPokemonData()
@@ -79,6 +78,7 @@ struct PokemonDetailsView: View {
                 .frame(width: UIScreen.main.bounds.width - 60, alignment: .topLeading)
             }
             .frame(width: UIScreen.main.bounds.width - 60, alignment: .topLeading)
+            .padding(.bottom, 50)
         }
         .padding(30)
         .foregroundColor(.black)

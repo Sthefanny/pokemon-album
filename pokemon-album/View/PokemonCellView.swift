@@ -12,10 +12,13 @@ struct PokemonCellView: View {
     @State var pokemon: Pokemon
     
     var body: some View {
-        ZStack {
-            _buildCardLeft(pokemon: pokemon)
-            _buildCardRight(pokemon: pokemon)
+        NavigationLink(destination: PokemonDetailsView(pokemon: pokemon)) {
+            ZStack {
+                _buildCardLeft(pokemon: pokemon)
+                _buildCardRight(pokemon: pokemon)
+            }
         }
+        .buttonStyle(PlainButtonStyle())
     }
     
     func _buildCardLeft(pokemon: Pokemon) -> some View {
