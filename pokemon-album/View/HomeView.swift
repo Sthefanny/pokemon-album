@@ -19,17 +19,26 @@ struct HomeView: View {
                     ZStack(alignment: .top) {
                         Image("pokemons")
                             .resizable()
-                            .aspectRatio(contentMode: .fit)
+                            .scaledToFit()
                         
                         
-                        Text("Album Pokémon")
-                            .font(.title2)
-                            .foregroundColor(Color("darkPurple"))
-                            .fontWeight(.bold)
-                            .padding(.top)
-                            .frame(width: UIScreen.main.bounds.width - 40, alignment: .leading)
+                        HStack (alignment: .top) {
+                            Text("PokéAlbum")
+                                .font(.title2)
+                                .foregroundColor(Color("darkPurple"))
+                                .fontWeight(.bold)
+                                .padding(.top)
+                            Spacer()
+                            NavigationLink(destination: GetCardsView()) {
+                                Image("cardsIcon")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 50, height: 50, alignment: .leading)
+                            }
+                        }
+                        .padding(.horizontal, 20)
                     }
-                    .frame(width: UIScreen.main.bounds.width, alignment: .center)
+                    .frame(width: UIScreen.main.bounds.width, alignment: .topLeading)
                     
                     if (pokemonViewModel.pokemon.count > 0) {
                         ScrollView {
@@ -46,10 +55,12 @@ struct HomeView: View {
             }
             .onAppear {
                 pokemonViewModel.fetchPokemon { _ in }
+                let ownedCards = OwnedCardsHelper.getAllOwnedCards()
+                print(ownedCards)
             }
             .navigationBarHidden(true)
         }
-        .accentColor( .white)
+        .accentColor(Color("darkPurple"))
     }
 }
 

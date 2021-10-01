@@ -19,6 +19,7 @@ struct PokemonCellView: View {
             }
         }
         .buttonStyle(PlainButtonStyle())
+        .disabled(OwnedCardsHelper.getOwnedCardsByNumber(number: pokemon.number) == nil)
     }
     
     func _buildCardLeft(pokemon: Pokemon) -> some View {
