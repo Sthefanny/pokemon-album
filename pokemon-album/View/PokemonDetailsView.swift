@@ -13,7 +13,7 @@ struct PokemonDetailsView: View {
     
     var body: some View {
         ZStack {
-            Color("\(pokemon.types.first ?? ")").edgesIgnoringSafeArea(.all)
+            Color("\(pokemon.types.first ?? "")").edgesIgnoringSafeArea(.all)
             
             VStack {
                 _buildPokemonData()
