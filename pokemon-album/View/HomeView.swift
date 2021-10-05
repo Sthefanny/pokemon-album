@@ -55,8 +55,6 @@ struct HomeView: View {
             }
             .onAppear {
                 pokemonViewModel.fetchPokemon { _ in }
-                let ownedCards = OwnedCardsHelper.getAllOwnedCards()
-                print(ownedCards)
             }
             .navigationBarHidden(true)
         }

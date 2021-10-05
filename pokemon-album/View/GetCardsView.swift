@@ -57,6 +57,9 @@ struct GetCardsView: View {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                 self.showResult = true
                             }
+                        } else {
+                            self.flipped.toggle()
+                            self.showResult = false
                         }
                     }
                 }
